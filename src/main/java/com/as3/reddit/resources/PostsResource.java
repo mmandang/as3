@@ -24,7 +24,7 @@ public class PostsResource {
     @POST
     public Response createpOSTS(Posts posts) throws URISyntaxException {
         // store the new posts
-        int newPostsId = postsDao.createPosts(posts.getUrl(), posts.getLastName());
+        int newPostsId = postsDao.createPosts(posts.getUrl(), posts.getTitle());
         return Response.created(new URI(String.valueOf(newPostsId))).build();
     }
 
