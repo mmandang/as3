@@ -1,0 +1,6 @@
+com\as3\reddit\representations\Posts.class
+com\as3\reddit\dao\PostsDAO.class
+com\as3\reddit\App.class
+com\as3\reddit\resources\PostsResource.class
+com\as3\reddit\dao\mappers\PostsMapper.class
+com\as3\reddit\RedditConfiguration.class
