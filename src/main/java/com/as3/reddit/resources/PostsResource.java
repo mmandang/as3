@@ -21,14 +21,23 @@ public class PostsResource {
         //this.validator = validator;
     }
 
-        //     List<Blog> blogs = new ArrayList<>();
-        // while (dbCursor.hasNext()) {
-        //     Blog blog = dbCursor.next();
-        //     blogs.add(blog);
-        // }
-        // return blogs;
+    @POST
+    public Response createpOSTS(Posts posts) throws URISyntaxException {
+        // store the new posts
+        int newPostsId = postsDao.createPosts(posts.getUrl(), posts.getLastName());
+        return Response.created(new URI(String.valueOf(newPostsId))).build();
+    }
 
-    @PUT
+    // @POST("/{id}")
+    // public Response getPosts(@PathParam("id") int id) {
+    //     // retrieve information about the posts with the provided id
+    //     Posts posts = postsDao.getPostsById(id);
+    //     return Response
+    //             .ok(posts)
+    //             .build();
+    // }
+
+    @POST
     @Path("/{id}")
     public Response likePost(@PathParam("id") int id) {       
         postsDao.likePost(id);

@@ -2,6 +2,6 @@ message: This is a message defined in the configuration file config.yaml.
 messageRepetitions: 3
 database:
    driverClass: com.mysql.jdbc.Driver
-   user: phonebookuser
-   password: phonebookpassword
-   url: jdbc:mysql://localhost/phonebook
+   user: reddituser
+   password: redditkpassword
+   url: jdbc:mysql://localhost/reddit
